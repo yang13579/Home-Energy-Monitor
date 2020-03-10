@@ -1,0 +1,40 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-------------------------------------------------------------------------
+
+entity Compx4 is port (
+   
+   A1		   :  in std_logic;
+   
+   B1			:  in std_logic;
+	
+	A2		   :  in std_logic;
+   
+   B2			:  in std_logic;
+	
+   A3		   :  in std_logic;
+   
+   B3			:  in std_logic;
+	
+   A4		   :  in std_logic;
+   
+   B4			:  in std_logic;
+	
+	AGTB		:	out std_logic;
+	
+	AEQB		:	out std_logic;
+	
+	ALTB		:	out std_logic
+); 
+end Compx4;
+
+architecture Behavioral of Compx4 is
+begin
+   AGRB=A AND (NOT B);
+	
+	AEQB=NOT(A XOR B);
+	
+	ALEB=(NOT A) AND B;
+end architecture Behavioral; 

@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-------------------------------------------------------------------------
+
+entity SevenSegment is port (
+   
+   hex	   :  in  std_logic_vector(3 downto 0);   
+   
+   sevenseg :  out std_logic_vector(6 downto 0)    
+); 
+end SevenSegment;
+
+architecture Behavioral of SevenSegment is
+begin
+   with hex select			   				
+	sevenseg 		 					   <= "0111111" when "0000",
+end architecture Behavioral; 
